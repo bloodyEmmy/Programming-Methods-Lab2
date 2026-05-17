@@ -12,7 +12,19 @@ int main() {
     string name;
     cout << "Введите название корабля: ";
     cin >> name;
+
     for (int s: sizes) {
-        vector<Ship> answer = search_linear(my_fleet, s, name);
+        vector<Ship> answer_linerar;
+        search_linear(my_fleet, s, name, answer_linerar);
+        cout << "Линейный поиск на " << s << " элементов: " << answer_linerar.size() << "кораблей" << "\n";
+
+        vector<Ship> answer_bin;
+        TreeNode* root = nullptr;
+        for (int i = 0; i < s; i++) {
+            root = create_bin_tree(root, my_fleet[i]);
+        }
+        search_bin_tree(root, name, answer_bin);
+        cout << "Бинарное дерево на " << s << " элементов:" << answer_bin.size() << "кораблей" << "\n";
+        delete_bin_tree(root);
     }
 }
