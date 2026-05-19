@@ -1,6 +1,7 @@
 #include <iostream>
 
-#include "search.h"
+#include "linear_bin.h"
+#include "rb_tree.h"
 
 using namespace std;
 
@@ -14,9 +15,9 @@ int main() {
     cin >> name;
 
     for (int s: sizes) {
-        vector<Ship> answer_linerar;
-        search_linear(my_fleet, s, name, answer_linerar);
-        cout << "Линейный поиск на " << s << " элементов: " << answer_linerar.size() << "кораблей" << "\n";
+        vector<Ship> answer_linear;
+        search_linear(my_fleet, s, name, answer_linear);
+        cout << "Линейный поиск на " << s << " элементов: " << answer_linear.size() << "кораблей" << "\n";
 
         vector<Ship> answer_bin;
         TreeNode* root = nullptr;
