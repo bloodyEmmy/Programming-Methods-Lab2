@@ -1,5 +1,5 @@
-#ifndef SEARCH_H
-#define SEARCH_H
+#ifndef LINEAR_BIN
+#define LINEAR_BIN
 
 #include "structure_generate.h"
 
@@ -12,22 +12,6 @@ struct TreeNode {
         data = s;
         left = nullptr;
         right = nullptr;
-    }
-};
-
-struct RBNode {
-    Ship data;
-    RBNode* left;
-    RBNode* right;
-    RBNode* parent;
-    bool is_red;
-
-    RBNode(Ship s) {
-        data = s;
-        left = nullptr;
-        right = nullptr;
-        parent = nullptr;
-        is_red = true;
     }
 };
 
