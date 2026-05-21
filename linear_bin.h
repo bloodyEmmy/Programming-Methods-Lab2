@@ -11,7 +11,11 @@ struct TreeNode {
     TreeNode* left;          ///< Указатель на левого потомка
     TreeNode* right;         ///< Указатель на правого потомка
 
-    TreeNode(Ship s) : data(s), left(nullptr), right(nullptr) {}
+    TreeNode(Ship s) {
+        data = s;
+        left = nullptr;
+        right = nullptr;
+    }
 };
 
 /**

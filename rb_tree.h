@@ -15,7 +15,13 @@ struct RBNode {
     RBNode* parent;          ///< Указатель на родителя
     bool is_red;             ///< Флаг цвета узла (true - красный, false - черный)
 
-    RBNode(Ship s) : data(s), left(nullptr), right(nullptr), parent(nullptr), is_red(true) {}
+    RBNode(Ship s) {
+        data = s;
+        left = nullptr;
+        right = nullptr;
+        parent = nullptr;
+        is_red = true;
+    }
 };
 
 /**

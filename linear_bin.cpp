@@ -11,7 +11,6 @@ void search_linear(vector<Ship>& my_vector, int n, string value, vector<Ship>& a
     }
 }
 
-// ИТЕРАТИВНОЕ СОЗДАНИЕ (без рекурсии)
 TreeNode* create_bin_tree(TreeNode* root, Ship value) {
     TreeNode* new_node = new TreeNode(value);
     if (root == nullptr) {
@@ -38,13 +37,12 @@ TreeNode* create_bin_tree(TreeNode* root, Ship value) {
     return root;
 }
 
-// ИТЕРАТИВНЫЙ ПОИСК (без рекурсии)
 void search_bin_tree(TreeNode* node, string value, vector<Ship>& answer) {
     TreeNode* current = node;
     while (current != nullptr) {
         if (value == current->data.ship_name) {
             answer.push_back(current->data);
-            current = current->left; // Дубликаты у нас всегда слева, идем дальше
+            current = current->left;
         }
         else if (value < current->data.ship_name) {
             current = current->left;
@@ -55,7 +53,6 @@ void search_bin_tree(TreeNode* node, string value, vector<Ship>& answer) {
     }
 }
 
-// ИТЕРАТИВНОЕ УДАЛЕНИЕ (через вектор-стек, чтобы не забить память вызовов)
 void delete_bin_tree(TreeNode* root) {
     if (root == nullptr) return;
     

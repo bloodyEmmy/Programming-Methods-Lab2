@@ -3,7 +3,7 @@
 #include <string>
 #include <chrono>
 #include <fstream>
-#include <windows.h>
+// #include <windows.h>
 
 #include "linear_bin.h"
 #include "rb_tree.h"
@@ -13,7 +13,7 @@ using namespace std;
 using namespace std::chrono;
 
 int main() {
-    SetConsoleOutputCP(CP_UTF8);
+    // SetConsoleOutputCP(CP_UTF8);
     srand(time(0));
 
     vector<Ship> my_fleet(1000000);
