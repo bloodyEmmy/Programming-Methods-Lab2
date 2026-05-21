@@ -1,0 +1,35 @@
+\doxysection{rb\+\_\+tree.\+h}
+\hypertarget{rb__tree_8h_source}{}\label{rb__tree_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RB\_TREE}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RB\_TREE}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}structure\_generate.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }RBNode\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{structShip}{Ship}}\ \mbox{\hyperlink{structRBNode_a1d3005e6f1f41cb5ca65fb94d598bcc1}{data}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ RBNode*\ \mbox{\hyperlink{structRBNode_a3345545f8a1678010bca11b5f7153a4a}{left}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ RBNode*\ \mbox{\hyperlink{structRBNode_af82826872827c548a5713eb84f264767}{right}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ RBNode*\ \mbox{\hyperlink{structRBNode_a131e0d1a4f73d55e6b5ad282c6846612}{parent}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structRBNode_a44e89cfed26819005b1f5424ebd07f66}{is\_red}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ RBNode(\mbox{\hyperlink{structShip}{Ship}}\ s)\ :\ \mbox{\hyperlink{structRBNode_a1d3005e6f1f41cb5ca65fb94d598bcc1}{data}}(s),\ \mbox{\hyperlink{structRBNode_a3345545f8a1678010bca11b5f7153a4a}{left}}(nullptr),\ \mbox{\hyperlink{structRBNode_af82826872827c548a5713eb84f264767}{right}}(nullptr),\ \mbox{\hyperlink{structRBNode_a131e0d1a4f73d55e6b5ad282c6846612}{parent}}(nullptr),\ \mbox{\hyperlink{structRBNode_a44e89cfed26819005b1f5424ebd07f66}{is\_red}}(true)\ \{\}}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ create\_rb\_tree(\mbox{\hyperlink{structRBNode}{RBNode}}*\&\ root,\ \mbox{\hyperlink{structShip}{Ship}}\ value);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ left\_rotate(\mbox{\hyperlink{structRBNode}{RBNode}}*\&\ root,\ \mbox{\hyperlink{structRBNode}{RBNode}}*\ node);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ right\_rotate(\mbox{\hyperlink{structRBNode}{RBNode}}*\&\ root,\ \mbox{\hyperlink{structRBNode}{RBNode}}*\ node);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ fix\_rb\_tree(\mbox{\hyperlink{structRBNode}{RBNode}}*\&\ root,\ \mbox{\hyperlink{structRBNode}{RBNode}}*\ node);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ search\_rb\_tree(\mbox{\hyperlink{structRBNode}{RBNode}}*\ node,\ std::string\ value,\ std::vector<Ship>\&\ answer);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ delete\_rb\_tree(\mbox{\hyperlink{structRBNode}{RBNode}}*\ node);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

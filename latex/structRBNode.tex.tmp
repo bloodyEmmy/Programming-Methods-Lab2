@@ -1,0 +1,47 @@
+\doxysection{RBNode Struct Reference}
+\hypertarget{structRBNode}{}\label{structRBNode}\index{RBNode@{RBNode}}
+
+
+Узел красно-\/черного дерева.  
+
+
+
+
+{\ttfamily \#include $<$rb\+\_\+tree.\+h$>$}
+
+
+
+Collaboration diagram for RBNode\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structRBNode_ab0bee10f16251f36561d6efc7683b431}\label{structRBNode_ab0bee10f16251f36561d6efc7683b431} 
+{\bfseries RBNode} (\mbox{\hyperlink{structShip}{Ship}} s)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structRBNode_a1d3005e6f1f41cb5ca65fb94d598bcc1}\label{structRBNode_a1d3005e6f1f41cb5ca65fb94d598bcc1} 
+\mbox{\hyperlink{structShip}{Ship}} {\bfseries data}
+\begin{DoxyCompactList}\small\item\em Данные узла (корабль). \end{DoxyCompactList}\item 
+\Hypertarget{structRBNode_a3345545f8a1678010bca11b5f7153a4a}\label{structRBNode_a3345545f8a1678010bca11b5f7153a4a} 
+\mbox{\hyperlink{structRBNode}{RBNode}} \texorpdfstring{$\ast$}{*} {\bfseries left}
+\begin{DoxyCompactList}\small\item\em Указатель на левого потомка \end{DoxyCompactList}\item 
+\Hypertarget{structRBNode_af82826872827c548a5713eb84f264767}\label{structRBNode_af82826872827c548a5713eb84f264767} 
+\mbox{\hyperlink{structRBNode}{RBNode}} \texorpdfstring{$\ast$}{*} {\bfseries right}
+\begin{DoxyCompactList}\small\item\em Указатель на правого потомка \end{DoxyCompactList}\item 
+\Hypertarget{structRBNode_a131e0d1a4f73d55e6b5ad282c6846612}\label{structRBNode_a131e0d1a4f73d55e6b5ad282c6846612} 
+\mbox{\hyperlink{structRBNode}{RBNode}} \texorpdfstring{$\ast$}{*} {\bfseries parent}
+\begin{DoxyCompactList}\small\item\em Указатель на родителя \end{DoxyCompactList}\item 
+\Hypertarget{structRBNode_a44e89cfed26819005b1f5424ebd07f66}\label{structRBNode_a44e89cfed26819005b1f5424ebd07f66} 
+bool {\bfseries is\+\_\+red}
+\begin{DoxyCompactList}\small\item\em Флаг цвета узла (true -\/ красный, false -\/ черный). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Узел красно-\/черного дерева. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rb\+\_\+tree.\+h\end{DoxyCompactItemize}

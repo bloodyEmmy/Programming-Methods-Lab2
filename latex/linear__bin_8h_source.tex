@@ -1,0 +1,27 @@
+\doxysection{linear\+\_\+bin.\+h}
+\hypertarget{linear__bin_8h_source}{}\label{linear__bin_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LINEAR\_BIN}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LINEAR\_BIN}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}structure\_generate.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{struct\ }TreeNode\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{structShip}{Ship}}\ \mbox{\hyperlink{structTreeNode_ac1402ebfc3b9b3cfc54d056adfbb1ab7}{data}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00011\ \ \ \ \ TreeNode*\ \mbox{\hyperlink{structTreeNode_a5335e7d975822e87088ec2afdefb1736}{left}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ TreeNode*\ \mbox{\hyperlink{structTreeNode_a71b4faa364404d671943562b352b1b74}{right}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ TreeNode(\mbox{\hyperlink{structShip}{Ship}}\ s)\ :\ \mbox{\hyperlink{structTreeNode_ac1402ebfc3b9b3cfc54d056adfbb1ab7}{data}}(s),\ \mbox{\hyperlink{structTreeNode_a5335e7d975822e87088ec2afdefb1736}{left}}(nullptr),\ \mbox{\hyperlink{structTreeNode_a71b4faa364404d671943562b352b1b74}{right}}(nullptr)\ \{\}}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ search\_linear(std::vector<Ship>\&\ my\_vector,\ \textcolor{keywordtype}{int}\ n,\ std::string\ value,\ std::vector<Ship>\&\ answer);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00032\ \mbox{\hyperlink{structTreeNode}{TreeNode}}*\ create\_bin\_tree(\mbox{\hyperlink{structTreeNode}{TreeNode}}*\ root,\ \mbox{\hyperlink{structShip}{Ship}}\ value);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ delete\_bin\_tree(\mbox{\hyperlink{structTreeNode}{TreeNode}}*\ node);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ search\_bin\_tree(\mbox{\hyperlink{structTreeNode}{TreeNode}}*\ node,\ std::string\ value,\ std::vector<Ship>\&\ answer);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
