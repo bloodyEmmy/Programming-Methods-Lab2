@@ -11,7 +11,6 @@ void generate_vector(vector<Ship>& my_vector) {
     string arr_captain_surname[] = {"Волков", "Белов", "Морозов", "Орлов", "Громов", "Лебедев", "Соколов"};
     string arr_captain_patronymic[] = {"Александрович", "Викторович", "Сергеевич", "Андреевич", "Дмитриевич"};
     
-    srand(time(0));
     for (int i = 0; i < 1000000; i++) {
         my_vector[i].ship_name = arr_ship_name[rand() % size(arr_ship_name)];
         my_vector[i].year_build = (1900 + rand() % 127);

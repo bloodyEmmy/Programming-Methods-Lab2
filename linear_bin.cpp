@@ -1,4 +1,5 @@
 #include "linear_bin.h"
+#include <vector>
 
 using namespace std;
 
@@ -10,46 +11,64 @@ void search_linear(vector<Ship>& my_vector, int n, string value, vector<Ship>& a
     }
 }
 
-TreeNode* create_bin_tree(TreeNode* node, Ship value) {
-    if (node == nullptr) {
-        node = new TreeNode(value);
+// ИТЕРАТИВНОЕ СОЗДАНИЕ (без рекурсии)
+TreeNode* create_bin_tree(TreeNode* root, Ship value) {
+    TreeNode* new_node = new TreeNode(value);
+    if (root == nullptr) {
+        return new_node;
     }
-    else {
-        if (value.ship_name <= node->data.ship_name) {
-            node->left = create_bin_tree(node->left, value);
+    
+    TreeNode* current = root;
+    while (true) {
+        if (value.ship_name <= current->data.ship_name) {
+            if (current->left == nullptr) {
+                current->left = new_node;
+                break;
+            }
+            current = current->left;
         }
         else {
-            node->right = create_bin_tree(node->right, value);
+            if (current->right == nullptr) {
+                current->right = new_node;
+                break;
+            }
+            current = current->right;
         }
     }
-    return node;
+    return root;
 }
 
-void delete_bin_tree(TreeNode* node) {
-    if (node == nullptr) {
-        return;
-    }
-    else {
-        delete_bin_tree(node->left);
-        delete_bin_tree(node->right);
-        delete node;
-    }
-}
-
+// ИТЕРАТИВНЫЙ ПОИСК (без рекурсии)
 void search_bin_tree(TreeNode* node, string value, vector<Ship>& answer) {
-    if (node == nullptr) {
-        return;
-    }
-    else {
-        if (value == node->data.ship_name) {
-            answer.push_back(node->data);
-            search_bin_tree(node->left, value, answer);
+    TreeNode* current = node;
+    while (current != nullptr) {
+        if (value == current->data.ship_name) {
+            answer.push_back(current->data);
+            current = current->left; // Дубликаты у нас всегда слева, идем дальше
         }
-        else if (value < node->data.ship_name) {
-            search_bin_tree(node->left, value, answer);
+        else if (value < current->data.ship_name) {
+            current = current->left;
         }
         else {
-            search_bin_tree(node->right, value, answer);
+            current = current->right;
         }
+    }
+}
+
+// ИТЕРАТИВНОЕ УДАЛЕНИЕ (через вектор-стек, чтобы не забить память вызовов)
+void delete_bin_tree(TreeNode* root) {
+    if (root == nullptr) return;
+    
+    vector<TreeNode*> stack;
+    stack.push_back(root);
+    
+    while (!stack.empty()) {
+        TreeNode* current = stack.back();
+        stack.pop_back();
+        
+        if (current->left != nullptr) stack.push_back(current->left);
+        if (current->right != nullptr) stack.push_back(current->right);
+        
+        delete current;
     }
 }
