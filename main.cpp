@@ -69,7 +69,6 @@ int main() {
         cout << "Хэш-таблица: " << answer_hash.size() << " шт => " << time_hash << " сек\n\n";
 
         csv_file << s << "," << time_linear << "," << time_bin << "," << time_rb << "," << time_hash << "\n";
-        csv_file.flush();
     }
 
     csv_file.close();
