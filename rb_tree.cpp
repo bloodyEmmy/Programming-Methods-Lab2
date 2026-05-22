@@ -128,6 +128,7 @@ void search_rb_tree(RBNode* node, string value, vector<Ship>& answer) {
         if (value == node->data.ship_name) {
             answer.push_back(node->data);
             search_rb_tree(node->left, value, answer);
+            search_rb_tree(node->right, value, answer);
         }
         else if (value < node->data.ship_name) {
             search_rb_tree(node->left, value, answer);
